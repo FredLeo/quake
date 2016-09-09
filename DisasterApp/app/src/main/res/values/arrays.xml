@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--/*List of regions on the subscribe page*/-->
+    <string-array name="Regions">
+        <item>Northland</item>
+        <item>Auckland</item>
+        <item>Waikato</item>
+        <item>Bay of Plenty</item>
+        <item>Gisborne</item>
+        <item>Hawke\'s Bay</item>
+        <item>Taranaki</item>
+        <item>Manawatu-Whanganui</item>
+        <item>Wellington</item>
+        <item>Tasman</item>
+        <item>Nelson</item>
+        <item>Marlborough</item>
+        <item>West Coast</item>
+        <item>Canterbury</item>
+        <item>Otago</item>
+        <item>Southland</item>
+    </string-array>
+
+</resources>

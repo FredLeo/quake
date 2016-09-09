@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">DisasterApp</string>
+    <string name="Name">Name</string>
+    <string name="StreetAddress">Street Address</string>
+    <string name="City">Town/City</string>
+    <string name="Region">Region</string>
+    <string name="title_activity_pop_window">PopWindow</string>
+    <string name="tell_us_about">Please tell us about your experience of the earthquake.</string>
+    <string name="i_am_right">I am alright</string>
+    <string name="i_need_help">I need help</string>
+    <string name="help">help</string>
+    <string name="go_to_severity">Go to Severity</string>
+</resources>

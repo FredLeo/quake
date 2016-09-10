@@ -1,7 +1,6 @@
 package com.example.red_six.disasterapp;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -49,13 +48,6 @@ public class PopUpDemo extends Activity implements OnClickListener {
         else {
             popupMessage.showAsDropDown(popupButton,0,0);
         }
-    }
-
-    public void onGoSeverity(View view) {
-        final int result=1;
-        Intent sendBob=new Intent(this,Severity.class);
-        sendBob.putExtra("callingActivity","MainActivity");
-        startActivityForResult(sendBob,result);
     }
 }
 

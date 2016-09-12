@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.red_six.disasterapp">
+    <!--enable reading and writing to a file-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -15,23 +18,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <!--<activity-->
-            <!--android:name=".PopWindow"-->
-            <!--android:label="@string/title_activity_pop_window"-->
-            <!--android:theme="@style/AppTheme.NoActionBar" />-->
-        <activity android:name=".PopUpDemo"></activity>
-
-        <activity android:name=".Severity"
+        <activity
+            android:name=".Severity"
             android:label="Severity"
             android:theme="@style/AppTheme" />
-
-        <activity android:name=".Help"
+        <activity
+            android:name=".Help"
             android:label="Help"
             android:theme="@style/AppTheme" />
-
-        <activity android:name=".Alright"
+        <activity
+            android:name=".Alright"
             android:label="Alright"
             android:theme="@style/AppTheme" />
+        <activity
+            android:name=".EnterAddress"
+            android:label="@string/title_activity_enter_address"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

@@ -1,6 +1,5 @@
 package com.example.red_six.disasterapp;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -26,6 +25,13 @@ public class RegisterUser extends AppCompatActivity {
         toast.show();
 
         Intent intent = new Intent(this, Severity.class);
+        String message = "message from RegisterUser";
+        intent.putExtra(EXTRA_MESSAGE, message);
+        startActivity(intent);
+    }
+
+    public void onEnterAddress (View view) {
+        Intent intent = new Intent(this, EnterAddress.class);
         String message = "message from RegisterUser";
         intent.putExtra(EXTRA_MESSAGE, message);
         startActivity(intent);

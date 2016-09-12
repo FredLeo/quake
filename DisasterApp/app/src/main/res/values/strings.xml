@@ -11,4 +11,7 @@
     <string name="help">help</string>
     <string name="go_to_severity">Go to Severity</string>
     <string name="alright">I am alright</string>
+    <string name="title_activity_enter_address">enterAddress</string>
+    <string name="Cancel">Cancel</string>
+    <string name="Enter">Enter</string>
 </resources>

@@ -4,12 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.red_six.disasterapp.RegisterUser">
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/go_to_severity"
-        android:layout_marginTop="20dp"
-        android:onClick="onGoSeverity"/>
+
 
     <ScrollView
         android:layout_width="match_parent"
@@ -18,7 +13,7 @@
         <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:id="@+id/Home">
 
             <RelativeLayout
@@ -26,19 +21,26 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:orientation="vertical" >
-                <TextView android:id="@+id/text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/go_to_severity"
+                    android:onClick="onGoSeverity"
                     android:layout_alignParentTop="true"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="56dp"
-                    android:text="Popup Window will display on this Activity" />
-                <Button android:id="@+id/popupbutton"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+                <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:layout_centerVertical="true"
-                    android:text="Show Popup" />
+                    android:text="@string/title_activity_pop_window"
+                    android:onClick="onEnterAddress"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+
+                    />
+
+
             </RelativeLayout>
 
 
@@ -137,19 +139,19 @@
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/HomeStreet">
+                android:id="@+id/HomeStreet1">
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/StreetAddress"
-                    android:id="@+id/textStreetAddress"
+                    android:id="@+id/textStreetAddress1"
                     android:layout_weight="2" />
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textPersonName"
                     android:ems="10"
-                    android:id="@+id/editStreetAddress"
+                    android:id="@+id/editStreetAddress1"
                     android:layout_weight="1" />
             </LinearLayout>
             <LinearLayout
@@ -273,19 +275,19 @@
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/HomeStreet">
+                android:id="@+id/HomeStreet2">
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/StreetAddress"
-                    android:id="@+id/textStreetAddress"
+                    android:id="@+id/textStreetAddress2"
                     android:layout_weight="2" />
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textPersonName"
                     android:ems="10"
-                    android:id="@+id/editStreetAddress"
+                    android:id="@+id/editStreetAddress2"
                     android:layout_weight="1" />
             </LinearLayout>
             <LinearLayout
@@ -409,19 +411,19 @@
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/HomeStreet">
+                android:id="@+id/HomeStreet3">
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/StreetAddress"
-                    android:id="@+id/textStreetAddress"
+                    android:id="@+id/textStreetAddress3"
                     android:layout_weight="2" />
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textPersonName"
                     android:ems="10"
-                    android:id="@+id/editStreetAddress"
+                    android:id="@+id/editStreetAddress3"
                     android:layout_weight="1" />
             </LinearLayout>
             <LinearLayout
@@ -663,5 +665,4 @@
         </LinearLayout>
 
     </ScrollView>
-
 </RelativeLayout>

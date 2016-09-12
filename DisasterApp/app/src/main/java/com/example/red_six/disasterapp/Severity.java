@@ -1,6 +1,7 @@
 package com.example.red_six.disasterapp;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.ButtonBarLayout;
@@ -14,6 +15,8 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Button;
 import android.widget.Toast;
+
+import java.lang.reflect.Array;
 
 /**
  * Created by littl on 10/09/2016.
@@ -29,16 +32,18 @@ public class Severity extends AppCompatActivity {
 
         final String[] severities={"Violent, severe","Strong, powerful","Moderate", "Gentle, mild", "Heard but not felt"};
 
-        ListAdapter theAdapter=new ArrayAdapter<String>(this,R.layout.row_layout,severities);
+        ArrayAdapter<String> theAdapter=new ArrayAdapter<String>(this,R.layout.row_layout,severities);
+
+        ListView theListView = (ListView) findViewById(R.id.theListView);
+        theListView.setAdapter(theAdapter);
 
 
-        ListView thelistView = (ListView) findViewById(R.id.theListView);
-//        thelistView.setAdapter(theAdapter);
-
-        thelistView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        theListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                String feeling="you selected"+String.valueOf(adapterView.getItemAtPosition(i));
+            public void onItemClick(AdapterView<?> adapterView, View viewClicked, int position, long l) {
+                TextView lv = (TextView) viewClicked;
+                lv.setBackgroundColor(Color.parseColor("#ffccff"));
+                String feeling="you selected"+String.valueOf(adapterView.getItemAtPosition(position));
 
                 Toast.makeText(Severity.this,feeling,Toast.LENGTH_SHORT).show();
             }

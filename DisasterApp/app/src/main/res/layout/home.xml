@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.red_six.disasterapp.RegisterUser">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView" >
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Home">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp">
+                    <com.google.android.youtube.player.YouTubeThumbnailView
+                        android:id="@+id/one"
+                        android:layout_width="match_parent"
+                        android:layout_height="85dp"
+                        android:scaleType="centerCrop"
+                        android:background="@android:color/black"
+                        android:onClick="video1"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+                    <ImageView
+                        android:id="@+id/imageOne"
+                        android:layout_width="wrap_content"
+                        android:layout_height="85dp"
+                        android:layout_gravity="center"
+                        android:background="@android:color/black"
+                        android:src="@drawable/play_icon"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp">
+                <com.google.android.youtube.player.YouTubeThumbnailView
+                    android:id="@+id/two"
+                    android:layout_width="match_parent"
+                    android:layout_height="85dp"
+                    android:scaleType="centerCrop"
+                    android:layout_gravity="center"
+                    android:background="@android:color/black"
+                    android:onClick="video2"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+                <ImageView
+                    android:id="@+id/imageTwo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="85dp"
+                    android:layout_gravity="center"
+                    android:background="@android:color/black"
+                    android:src="@drawable/play_icon_2"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp">
+                <com.google.android.youtube.player.YouTubeThumbnailView
+                    android:id="@+id/three"
+                    android:layout_width="fill_parent"
+                    android:layout_height="85dp"
+                    android:scaleType="centerCrop"
+                    android:layout_gravity="center"
+                    android:background="@android:color/black"
+                    android:onClick="video3"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    />
+
+                    <ImageView
+                        android:id="@+id/imageThree"
+                        android:layout_width="wrap_content"
+                        android:layout_height="85dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/play_icon"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true" />
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp">
+                    <com.google.android.youtube.player.YouTubeThumbnailView
+                        android:id="@+id/four"
+                        android:layout_width="match_parent"
+                        android:layout_height="85dp"
+                        android:scaleType="centerCrop"
+                        android:background="@android:color/black"
+                        android:onClick="video4"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+                    <ImageView
+                        android:id="@+id/imageFour"
+                        android:layout_width="wrap_content"
+                        android:layout_height="85dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/play_icon_2"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true" />
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="0dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                style="@style/StandardButton"
+                android:id="@+id/goServrity"
+                android:text="@string/go_to_severity"
+                android:onClick="onGoSeverity"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+            <Button
+                android:text="@string/home"
+                android:onClick="onGoHome"
+                style="@style/StandardButton"/>
+            <Button
+                style="@style/StandardButton"
+                android:text="Address"
+                android:onClick="onShowAddress"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

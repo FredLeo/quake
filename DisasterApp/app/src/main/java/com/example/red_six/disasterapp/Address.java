@@ -4,7 +4,7 @@ package com.example.red_six.disasterapp;
  * Created by Robert on 11/09/2016.
  */
 public class Address {
-    private int id;
+    //private int id;
     private String name;
     private String address;
     private String city;
@@ -12,18 +12,18 @@ public class Address {
     public Address()
     {
     }
-    public Address(int id, String name, String address, String city, String region)
+    public Address(String name, String address, String city, String region)
     {
-        this.id=id;
+        //this.id=id;
         this.name=name;
         this.address=address;
         this.city=city;
         this.region=region;
 
     }
-    public void setId(int id) {
-        this.id = id;
-    }
+//    public void setId(int id) {
+//        this.id = id;
+//    }
     public void setName(String name) {
         this.name = name;
     }
@@ -33,15 +33,13 @@ public class Address {
     }
 
     public void setCity(String city) {
-        this.address = city;
+        this.city = city;
     }
 
     public void setRegion(String region) {
-        this.address = region;
+        this.region = region;
     }
-    public int getId() {
-        return id;
-    }
+//    public int getId() {return id;    }
     public String getName() {
         return name;
     }

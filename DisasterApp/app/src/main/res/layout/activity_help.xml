@@ -1,13 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/imgView"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/help"
-        android:textSize="20sp"
-        android:textStyle="bold"/>
-
+        android:textAlignment="center"
+        android:text="@string/help">
+    </TextView>
+    <com.google.android.youtube.player.YouTubePlayerView
+        android:id="@+id/youtube_help_player"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:layout_weight="1"
+        />
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="0dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                style="@style/StandardButton"
+                android:text="@string/go_to_severity"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:onClick="onGoSeverity" />
+            <Button
+                android:text="@string/home"
+                android:onClick="onGoHome"
+                style="@style/StandardButton"/>
+            <Button
+                style="@style/StandardButton"
+                android:text="@string/AddUser"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:onClick="onEnterAddress"/>
+        </LinearLayout>
+    </RelativeLayout>
 </LinearLayout>

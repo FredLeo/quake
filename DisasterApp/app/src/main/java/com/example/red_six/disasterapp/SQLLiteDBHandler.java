@@ -18,9 +18,9 @@ public class SQLLiteDBHandler extends SQLiteOpenHelper {
     // Database Version
     private static final int DATABASE_VERSION = 1;
     // Database Name
-    private static final String DATABASE_NAME ="AdressInfo";
+    private static final String DATABASE_NAME ="AddressInfo";
     // Contacts table name
-    private static final String TABLE_NAME ="Adresses";
+    private static final String TABLE_NAME ="Addresses";
     // Addreess Table Columns names
     private static final String KEY_ID ="id";
     private static final String KEY_NAME ="name";
@@ -37,7 +37,7 @@ public class SQLLiteDBHandler extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         String CREATE_CONTACTS_TABLE = "CREATE TABLE " + TABLE_NAME + "("
         + KEY_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," + KEY_NAME + " TEXT,"
-        + KEY_STREET_NAME + " TEXT" + KEY_CITY_NAME + " TEXT" + KEY_REGION_NAME + ")";
+        + KEY_STREET_NAME + " TEXT," + KEY_CITY_NAME + " TEXT," + KEY_REGION_NAME + " TEXT )";
         db.execSQL(CREATE_CONTACTS_TABLE);
     }
 
@@ -53,7 +53,7 @@ public class SQLLiteDBHandler extends SQLiteOpenHelper {
     public void addAddress(Address address) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
-        values.put(KEY_NAME, address.getName());//addess name
+        values.put(KEY_NAME, address.getName());//address name
         values.put(KEY_STREET_NAME, address.getAddress());//address st address
         values.put(KEY_CITY_NAME, address.getCity());//address city;
         values.put(KEY_REGION_NAME, address.getRegion());//address region
@@ -73,7 +73,7 @@ public class SQLLiteDBHandler extends SQLiteOpenHelper {
                 cursor.moveToFirst();
             }
         //save details into an address object and return it
-            Address address = new Address(Integer.parseInt(cursor.getString(0)),cursor.getString(1),
+            Address address = new Address(cursor.getString(1),
                     cursor.getString(2), cursor.getString(3), cursor.getString(4));
         return address;
     }
@@ -82,7 +82,7 @@ public class SQLLiteDBHandler extends SQLiteOpenHelper {
     public List<Address> getAllAddresses() {
         List<Address> addressList = new ArrayList<Address>();
         //select query
-        String selectQuery = "SELECT*FROM "+ TABLE_NAME;
+        String selectQuery = "SELECT * FROM "+ TABLE_NAME;
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery(selectQuery, null);
         //loop through rows, get data and add to list
@@ -90,7 +90,7 @@ public class SQLLiteDBHandler extends SQLiteOpenHelper {
             do {
                 //get the data
                 Address address = new Address();
-                address.setId(Integer.parseInt(cursor.getString(0)));
+//                address.setId(Integer.parseInt(cursor.getString(0)));
                 address.setName(cursor.getString(1));
                 address.setAddress(cursor.getString(2));
                 address.setCity(cursor.getString(3));
@@ -103,7 +103,7 @@ public class SQLLiteDBHandler extends SQLiteOpenHelper {
         return addressList;
     }
     //update an address
-    public int updateAddress(Address address) {
+    public int updateAddress(Address address, int id) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put(KEY_NAME, address.getName());
@@ -112,14 +112,14 @@ public class SQLLiteDBHandler extends SQLiteOpenHelper {
         values.put(KEY_REGION_NAME, address.getRegion());
         // updating row
         return db.update(TABLE_NAME, values, KEY_ID + " = ?",
-        new String[]{String.valueOf(address.getId())});
+        new String[]{String.valueOf(id)});
     }
 
     // Deleting an address
-    public void deleteAddress(Address address) {
+    public void deleteAddress(Address address, int id) {
         SQLiteDatabase db = this.getWritableDatabase();
         db.delete(TABLE_NAME, KEY_ID + " = ?",
-        new String[] { String.valueOf(address.getId()) });
+        new String[] { String.valueOf(id) });
         db.close();
     }
 }

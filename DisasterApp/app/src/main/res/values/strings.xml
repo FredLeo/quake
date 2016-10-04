@@ -1,17 +1,33 @@
 <resources>
     <string name="app_name">DisasterApp</string>
+    <string name="street">Street</string>
     <string name="Name">Name</string>
     <string name="StreetAddress">Street Address</string>
     <string name="City">Town/City</string>
     <string name="Region">Region</string>
     <string name="title_activity_pop_window">PopWindow</string>
     <string name="tell_us_about">Please tell us about your experience of the earthquake.</string>
-    <string name="i_am_right">I am alright</string>
+    <string name="i_am_right">I am OK</string>
     <string name="i_need_help">I need help</string>
-    <string name="help">help</string>
-    <string name="go_to_severity">Go to Severity</string>
+    <string name="help">Help Information</string>
+    <string name="go_to_severity">Severity</string>
     <string name="alright">I am alright</string>
     <string name="title_activity_enter_address">enterAddress</string>
     <string name="Cancel">Cancel</string>
     <string name="Enter">Enter</string>
+    <string name="home">Home</string>
+    <string name="AddUser">Add User</string>
+    <string name="hint_name">Enter Name of this Address</string>
+    <string name="hint_address">Enter Street Address</string>
+    <string name="hint_city">Enter City</string>
+    <string name="hint_region">Select Region</string>
+    <string name="err_msg_name">Enter the name of this address</string>
+    <string name="err_msg_address">Enter your street address</string>
+    <string name="err_msg_city">Enter the city</string>
+    <string name="heard_but_not_felt">Heard but not felt</string>
+    <string name="gentle_mild">Gentle, mild</string>
+    <string name="moderate">Moderate</string>
+    <string name="strong_powerful">Strong, powerful</string>
+    <string name="violent_severe">Violent, severe</string>
+
 </resources>

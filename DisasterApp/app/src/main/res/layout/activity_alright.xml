@@ -8,17 +8,53 @@
         android:id="@+id/imgView"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:src="@drawable/drawable"
         android:layout_weight="1" >
     </ImageView>
 
-    <Button
-        android:id="@+id/buttonLoadPicture"
+
+    <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/buttonLoadPicture"
+            style="@style/StandardButton"
+            android:onClick="onLoadImage"
+            android:text="Load Picture" >
+        </Button>
+    </RelativeLayout>
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_weight="0"
-        android:onClick="onLoadImage"
-        android:text="Load Picture" >
-    </Button>
-
+        android:orientation="vertical"
+        android:layout_marginBottom="0dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                style="@style/StandardButton"
+                android:text="@string/go_to_severity"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:onClick="onGoSeverity" />
+            <Button
+                android:text="@string/home"
+                android:onClick="onGoHome"
+                style="@style/StandardButton"/>
+            <Button
+                style="@style/StandardButton"
+                android:text="@string/AddUser"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:onClick="onEnterAddress"/>
+        </LinearLayout>
+    </RelativeLayout>
 </LinearLayout>
+
+
